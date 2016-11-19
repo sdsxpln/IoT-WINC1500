@@ -1,3 +1,5 @@
 **/Debug
 **/debug
 *.asuo
+/WINC1500_IOT_CLOUD_DEMO1/WINC1500_IOT_CLOUD_DEMO1/src/android_app/*.apk
+/WINC1500_IOT_CLOUD_DEMO1/.vs
