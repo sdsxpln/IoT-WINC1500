@@ -703,7 +703,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="src\" />
-    <Folder Include="src\android_app\" />
     <Folder Include="src\ASF\" />
     <Folder Include="src\ASF\common2\" />
     <Folder Include="src\ASF\common2\services\" />
@@ -813,10 +812,40 @@
     <Folder Include="src\ASF\thirdparty\CMSIS\Include\" />
     <Folder Include="src\ASF\thirdparty\CMSIS\Lib\" />
     <Folder Include="src\ASF\thirdparty\CMSIS\Lib\GCC\" />
+    <Folder Include="src\Azure-iot-sdk\" />
+    <Folder Include="src\Azure-iot-sdk\adapters\" />
+    <Folder Include="src\Azure-iot-sdk\azure_c_shared_utility\" />
+    <Folder Include="src\Azure-iot-sdk\esp8266\" />
+    <Folder Include="src\Azure-iot-sdk\samd\" />
+    <Folder Include="src\Azure-iot-sdk\sdk\" />
     <Folder Include="src\config\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\asf.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\adapters\sslClient_arduino.cpp">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\AzureIoTHubClient.cpp">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\esp8266\azcpgmspace.cpp">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\esp8266\time.cpp">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\samd\stdio.cpp">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\samd\time.cpp">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\sdk\makefile">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\sdk\metadata.txt">
       <SubType>compile</SubType>
     </None>
     <None Include="src\config\conf_board.h">
@@ -835,9 +864,6 @@
       <SubType>compile</SubType>
     </None>
     <None Include="src\config\conf_winc.h">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\android_app\Atmel_IOT_Sensor_2.0.21.apk">
       <SubType>compile</SubType>
     </None>
     <None Include="src\ASF\sam0\drivers\rtc\rtc_calendar.h">
@@ -1648,6 +1674,387 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\ASF\sam0\utils\syscalls\gcc\syscalls.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\Azure-iot-sdk\adapters\agenttime.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\adapters\httpapi_compact.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\adapters\platform_arduino.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\adapters\sslClient_arduino.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\adapters\threadapi_arduino.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\adapters\tickcounter_tirtos.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\adapters\tlsio_arduino.c">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\Azure-iot-sdk\adapters\tlsio_arduino.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\Azure-iot-sdk\AzureIoTHub.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\AzureIoTHubClient.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\agenttime.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\base64.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\base64.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\buffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\buffer_.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\condition.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\consolelogger.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\consolelogger.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\crt_abstractions.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\crt_abstractions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\doublylinkedlist.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\doublylinkedlist.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\gballoc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\gballoc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\gb_stdio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\gb_stdio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\gb_time.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\gb_time.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\hmac.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\hmac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\hmacsha256.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\hmacsha256.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\httpapi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\httpapiex.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\httpapiex.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\httpapiexsas.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\httpapiexsas.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\httpheaders.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\httpheaders.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\lock.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\macro_utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\map.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\map.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\optionhandler.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\optionhandler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\platform.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\refcount.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\sastoken.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\sastoken.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\sha-private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\sha.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\sha1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\sha224.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\sha384-512.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\shared_util_options.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\singlylinkedlist.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\singlylinkedlist.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\socketio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\stdint_ce6.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\strings.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\strings.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\string_tokenizer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\string_tokenizer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\threadapi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\tickcounter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\tlsio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\umock_c_prod.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\uniqueid.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\urlencode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\urlencode.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\usha.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\vector.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\vector.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\xio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\xio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\xlogging.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\xlogging.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\esp8266\azcpgmspace.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\agenttypesystem.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\agenttypesystem.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\blob.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\blob.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\codefirst.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\codefirst.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\commanddecoder.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\commanddecoder.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\datamarshaller.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\datamarshaller.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\datapublisher.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\datapublisher.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\dataserializer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\dataserializer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iotdevice.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iotdevice.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothubtransport.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothubtransport.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothubtransportamqp_auth.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothubtransporthttp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothubtransporthttp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothub_client.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothub_client.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothub_client_ll.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothub_client_ll.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothub_client_ll_uploadtoblob.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothub_client_ll_uploadtoblob.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothub_client_options.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothub_client_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothub_client_version.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothub_message.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothub_message.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\iothub_transport_ll.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\jsondecoder.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\jsondecoder.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\jsonencoder.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\jsonencoder.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\multitree.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\multitree.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\parson.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\parson.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\schema.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\schema.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\schemalib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\schemalib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\schemaserializer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\schemaserializer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\serializer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\sdk\version.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\demo.c">
