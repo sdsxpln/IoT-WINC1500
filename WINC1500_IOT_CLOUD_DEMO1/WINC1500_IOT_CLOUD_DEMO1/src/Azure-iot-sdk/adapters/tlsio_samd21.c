@@ -12,8 +12,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "azure_c_shared_utility/gballoc.h"
-#include "tlsio_arduino.h"
-#include "sslClient_arduino.h"
+#include "tlsio_samd21.h"
+#include "sslClient_samd21.h"
 #include "azure_c_shared_utility/socketio.h"
 #include "azure_c_shared_utility/xlogging.h"
 #include "azure_c_shared_utility/platform.h"

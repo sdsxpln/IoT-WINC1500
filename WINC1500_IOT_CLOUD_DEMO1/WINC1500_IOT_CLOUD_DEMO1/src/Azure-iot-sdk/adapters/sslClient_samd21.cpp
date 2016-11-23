@@ -2,23 +2,11 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #include <IPAddress.h>
-#include "sslClient_arduino.h"
+#include "sslClient_samd21.h"
 #include "azure_c_shared_utility/xlogging.h"
 
-#ifdef ARDUINO_ARCH_ESP8266
-#include "ESP8266WiFi.h"
-#include "WiFiClientSecure.h"
-static WiFiClientSecure sslClient; // for ESP8266
-#elif ARDUINO_SAMD_FEATHER_M0
-#include "Adafruit_WINC1500.h"
-#include "Adafruit_WINC1500Client.h"
-#include "Adafruit_WINC1500SSLClient.h"
-static Adafruit_WINC1500SSLClient sslClient; // for Adafruit WINC1500
-#else
-#include "WiFi101.h"
-#include "WiFiSSLClient.h"
+#include "driver/include/m2m_wifi.h"
 static WiFiSSLClient sslClient;
-#endif
 
 void sslClient_setTimeout(unsigned long timeout)
 {

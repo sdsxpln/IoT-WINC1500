@@ -111,6 +111,7 @@
 #include "socket/include/socket.h"
 #include "demo.h"
 #include "PubNub.h"
+#include "commentmonkey_http.h"
 
 #define STRING_EOL    "\r\n"
 #define STRING_HEADER "-- IoT Cloud Demo --"STRING_EOL	\
@@ -628,6 +629,9 @@ int main(void)
 	memcpy(msg_temp_report.name ,gs8DeviceName,(uint8)m2m_strlen((uint8 *)gs8DeviceName));
 	m2m_wifi_set_device_name((uint8 *)gs8DeviceName, (uint8)m2m_strlen((uint8 *)gs8DeviceName));
 	printf("\r\n");
+
+	simplesample_http_run();
+//	azureClient.
 
 	/* Initialize PubNub API. */
 	printf("main: PubNub configured with following settings:\r\n");

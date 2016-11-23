@@ -586,6 +586,7 @@
       <Value>../src/ASF/common/boards</Value>
       <Value>../src/config</Value>
       <Value>../src/Azure-iot-sdk</Value>
+      <Value>../src/WiFi101</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -817,25 +818,22 @@
     <Folder Include="src\Azure-iot-sdk\" />
     <Folder Include="src\Azure-iot-sdk\adapters\" />
     <Folder Include="src\Azure-iot-sdk\azure_c_shared_utility\" />
-    <Folder Include="src\Azure-iot-sdk\esp8266\" />
     <Folder Include="src\Azure-iot-sdk\samd\" />
     <Folder Include="src\Azure-iot-sdk\sdk\" />
     <Folder Include="src\config\" />
+    <Folder Include="src\RTCZero\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\RTCZero\RTCZero.h">
+      <SubType>compile</SubType>
+    </Compile>
     <None Include="src\asf.h">
       <SubType>compile</SubType>
     </None>
-    <None Include="src\Azure-iot-sdk\adapters\sslClient_arduino.cpp">
+    <Compile Include="src\Azure-iot-sdk\adapters\sslClient_samd21.cpp">
       <SubType>compile</SubType>
-    </None>
+    </Compile>
     <None Include="src\Azure-iot-sdk\AzureIoTHubClient.cpp">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\Azure-iot-sdk\esp8266\azcpgmspace.cpp">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\Azure-iot-sdk\esp8266\time.cpp">
       <SubType>compile</SubType>
     </None>
     <None Include="src\Azure-iot-sdk\samd\stdio.cpp">
@@ -1678,30 +1676,30 @@
     <Compile Include="src\ASF\sam0\utils\syscalls\gcc\syscalls.c">
       <SubType>compile</SubType>
     </Compile>
-    <None Include="src\Azure-iot-sdk\adapters\agenttime.c">
+    <Compile Include="src\Azure-iot-sdk\adapters\agenttime.c">
       <SubType>compile</SubType>
-    </None>
-    <None Include="src\Azure-iot-sdk\adapters\httpapi_compact.c">
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\adapters\httpapi_compact.c">
       <SubType>compile</SubType>
-    </None>
-    <None Include="src\Azure-iot-sdk\adapters\platform_arduino.c">
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\adapters\platform_samd21.c">
       <SubType>compile</SubType>
-    </None>
-    <None Include="src\Azure-iot-sdk\adapters\sslClient_arduino.h">
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\adapters\sslClient_samd21.h">
       <SubType>compile</SubType>
-    </None>
-    <None Include="src\Azure-iot-sdk\adapters\threadapi_arduino.c">
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\adapters\threadapi_samd21.c">
       <SubType>compile</SubType>
-    </None>
-    <None Include="src\Azure-iot-sdk\adapters\tickcounter_tirtos.c">
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\adapters\tickcounter_tirtos.c">
       <SubType>compile</SubType>
-    </None>
-    <None Include="src\Azure-iot-sdk\adapters\tlsio_arduino.c">
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\adapters\tlsio_samd21.c">
       <SubType>compile</SubType>
-    </None>
-    <None Include="src\Azure-iot-sdk\adapters\tlsio_arduino.h">
+    </Compile>
+    <Compile Include="src\Azure-iot-sdk\adapters\tlsio_samd21.h">
       <SubType>compile</SubType>
-    </None>
+    </Compile>
     <Compile Include="src\Azure-iot-sdk\AzureIoTHub.h">
       <SubType>compile</SubType>
     </Compile>
@@ -1909,9 +1907,6 @@
     <Compile Include="src\Azure-iot-sdk\azure_c_shared_utility\xlogging.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\Azure-iot-sdk\esp8266\azcpgmspace.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="src\Azure-iot-sdk\sdk\agenttypesystem.c">
       <SubType>compile</SubType>
     </Compile>
@@ -2059,12 +2054,21 @@
     <Compile Include="src\Azure-iot-sdk\sdk\version.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\commentmonkey_http.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\commentmonkey_http.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\demo.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\PubNub.c">
       <SubType>compile</SubType>
     </Compile>
+    <None Include="src\RTCZero\RTCZero.cpp">
+      <SubType>compile</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

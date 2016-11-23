@@ -3,7 +3,7 @@
 
 /*Codes_SRS_PLATFORM_ARDUINO_21_001: [ The platform_arduino shall implement the interface provided in the `platfom.h`. ]*/
 #include "azure_c_shared_utility/platform.h"
-#include "tlsio_arduino.h"
+#include "tlsio_samd21.h"
 
 /*Codes_SRS_PLATFORM_ARDUINO_21_003: [ The platform_init shall initialize the platform. ]*/
 /*Codes_SRS_PLATFORM_ARDUINO_21_004: [ The platform_init shall allocate any memory needed to control the platform. ]*/
